@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-12">
+    <h1>Hello visitor!!</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-8">
+    <p>Please Gib Monkey Banana</p>
+    <label for="item">Give monkey a:</label>
+    <input type="text" id="item" [(ngModel)]="item">
+    <button class="btn btn-warning" type="button" (click)="onGiveBanana()" [disabled]="full">Gib</button>
+    <p *ngIf="!full">Bananas given: <span style="color: orange; font-size: 90px">{{ bananas }}</span></p>
+    <div *ngIf="full">
+      <h2>Monkey no Hungry anymore!</h2>
+      <hr>
+      <h3>Tank yu!</h3>
+    </div>
+    <div class="card text-white bg-danger mb-3" style="max-width: 18rem;" *ngIf="bad">
+      <div class="card-header">Bad item</div>
+      <div class="card-body">
+        <h5 class="card-title">Euuhh!!!</h5>
+        <p class="card-text">Monkey eat no {{ item }}</p>
+        <h4 class="card-text">YOU EAT {{ item | uppercase}}</h4>
+        <p class="card-text">BAD HOOMAN BAD OU OU OU!!!</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <img src="https://play-lh.googleusercontent.com/gLr99j4QilIETpDL82x7XzF-RSNFEg5M_CJ83pAzs-47LnPmtncbiJeCD4V2b6LZ8yc" class="img-fluid rounded-2 float-start">
+  </div>
+</div>

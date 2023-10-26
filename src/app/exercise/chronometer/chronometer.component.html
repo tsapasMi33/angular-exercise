@@ -1,0 +1,12 @@
+<div class="card bg-light mb-3 text-center" style="max-width: 18rem;">
+  <div class="card-header">
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-success" (click)="onPlay()">&#9658;</button>
+      <button type="button" class="btn btn-warning" (click)="onPause()">&#10074;&#10074;</button>
+      <button type="button" class="btn btn-danger" (click)="onStop()">&#9724;</button>
+    </div>
+  </div>
+  <div class="card-body">
+    <h1>{{seconds | timer}}</h1>
+  </div>
+</div>
