@@ -12,7 +12,8 @@ export class HeaderComponent {
       new Link("demo1","demo/demo1")
     ]),
     new Link("Exercises","", [
-      new Link("Timer", "exercises/timer")
+      new Link("Timer", "exercises/timer"),
+      new Link("Shopping", "exercises/shopping")
     ])
   ]
 }

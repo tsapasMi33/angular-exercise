@@ -13,8 +13,10 @@
           <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" routerLinkActive="active">
             {{ link.title }}
           </a>
-          <ul class="dropdown-menu"  *ngFor="let child of link.children">
-            <li><a class="dropdown-item" [routerLink]=child.url  routerLinkActive="active">{{ child.title }}</a></li>
+          <ul class="dropdown-menu" >
+            <li *ngFor="let child of link.children">
+              <a class="dropdown-item" [routerLink]=child.url  routerLinkActive="active">{{ child.title }}</a>
+            </li>
           </ul>
         </li>
       </ul>
