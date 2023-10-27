@@ -1,0 +1,19 @@
+<h2>Shopping List</h2>
+<table class="table table-dark table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Product</th>
+    <th scope="col">Category</th>
+    <th scope="col">Price</th>
+    <th scope="col">Add To Cart</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let product of products">
+    <th scope="row">{{product.name}}</th>
+    <td>{{product.category}}</td>
+    <td>{{product.price | currency:'EUR'}}</td>
+    <td><button class="btn btn-success" type="button" (click)="onAddProduct(product)">Add</button></td>
+  </tr>
+  </tbody>
+</table>
